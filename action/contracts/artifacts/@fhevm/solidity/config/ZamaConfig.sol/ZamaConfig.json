@@ -1,0 +1,16 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ZamaConfig",
+  "sourceName": "@fhevm/solidity/config/ZamaConfig.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "ZamaProtocolUnsupported",
+      "type": "error"
+    }
+  ],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea26469706673582212203e01d60650fb76d2405e9b37db10c03e7ccc340ef01e54df791d81233883dfee64736f6c63430008180033",
+  "deployedBytecode": "0x600080fdfea26469706673582212203e01d60650fb76d2405e9b37db10c03e7ccc340ef01e54df791d81233883dfee64736f6c63430008180033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
