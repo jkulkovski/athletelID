@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #0f1729;
+  --accent-blue: #3b82f6;
+  --accent-orange: #f97316;
+  --accent-green: #10b981;
+  --accent-purple: #8b5cf6;
+}
+
+html, body {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: #ffffff;
+  font-feature-settings: "cv01", "cv02", "cv03";
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* 卡片样式 */
+.card {
+  @apply rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.03] backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:border-white/20;
+}
+
+.card-primary {
+  @apply card bg-gradient-to-br from-blue-500/10 to-purple-500/10 border-blue-400/20;
+}
+
+.card-success {
+  @apply card bg-gradient-to-br from-green-500/10 to-emerald-500/10 border-green-400/20;
+}
+
+/* 按钮样式 */
+.btn {
+  @apply px-5 py-2.5 rounded-xl font-medium transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg;
+}
+
+.btn-primary {
+  @apply btn bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-blue-500/30;
+}
+
+.btn-secondary {
+  @apply btn bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-orange-500/30;
+}
+
+.btn-success {
+  @apply btn bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-green-500/30;
+}
+
+.btn-outline {
+  @apply btn bg-transparent border-2 border-white/20 hover:bg-white/5 text-white;
+}
+
+/* 输入框样式 */
+.input {
+  @apply w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-blue-400/50 focus:ring-2 focus:ring-blue-400/20 transition-all;
+}
+
+.input-group {
+  @apply space-y-2;
+}
+
+.input-label {
+  @apply text-sm font-medium text-white/70 ml-1;
+}
+
+/* 徽章样式 */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+}
+
+.badge-idle {
+  @apply badge bg-gray-500/20 text-gray-300 border border-gray-500/30;
+}
+
+.badge-loading {
+  @apply badge bg-blue-500/20 text-blue-300 border border-blue-500/30 animate-pulse;
+}
+
+.badge-ready {
+  @apply badge bg-green-500/20 text-green-300 border border-green-500/30;
+}
+
+.badge-error {
+  @apply badge bg-red-500/20 text-red-300 border border-red-500/30;
+}
+
+/* 状态指示器 */
+.status-dot {
+  @apply inline-block w-2 h-2 rounded-full mr-2;
+}
+
+.status-dot-success {
+  @apply status-dot bg-green-400 shadow-lg shadow-green-400/50 animate-pulse;
+}
+
+.status-dot-error {
+  @apply status-dot bg-red-400 shadow-lg shadow-red-400/50;
+}
+
+.status-dot-warning {
+  @apply status-dot bg-yellow-400 shadow-lg shadow-yellow-400/50;
+}
+
+/* 标题样式 */
+.section-title {
+  @apply text-2xl font-bold bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent;
+}
+
+.section-subtitle {
+  @apply text-sm text-white/50 mt-1;
+}
+
+/* 分隔线 */
+.divider {
+  @apply border-t border-white/10 my-6;
+}
+
+/* 加载动画 */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.loading-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+  background-size: 1000px 100%;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
